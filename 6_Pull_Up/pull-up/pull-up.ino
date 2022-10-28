@@ -7,18 +7,18 @@ void setup()                          // Setup runs once at beginning of sketch
 {
   pinMode(LEDpin, OUTPUT);            // set LED pin to output
   pinMode(buttonPin, INPUT_PULLUP);   // set button pin to use internal Pull-Up resistor
-                                      //with internal pull-up, button will be 0 when ON and 1 when OFF
+                                      // with internal pull-up, button will be 0 when ON and 1 when OFF
   Serial.begin(38400);                // set rate of Serial port (needs to match Serial Monitor rate)
 }
 
-void loop()                               // Loop runs forever, until power off or reset
+void loop()                           
 {
   buttonState = digitalRead(buttonPin);   // button state equals button pin input
   delay(10);                              // wait 10ms for button to "settle down", debounce
   
   Serial.println(buttonState);            // print current button state to Serial Monitor
 
-  if (buttonState == HIGH)                // if button is pressed...
+  if (buttonState == LOW)                // if button is pressed (LOW with internal Pull-Up)
   {
     digitalWrite(LEDpin, HIGH);           // turn on LED
   }
@@ -27,4 +27,4 @@ void loop()                               // Loop runs forever, until power off 
     digitalWrite(LEDpin, LOW);            // turn off LED
   }
 
-}                                         // end of loop
+}                                         
