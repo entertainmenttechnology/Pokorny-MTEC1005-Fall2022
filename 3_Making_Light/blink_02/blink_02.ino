@@ -1,7 +1,8 @@
 /*______________
   Basic Digital LED Control
 
-  Blink 2 LEDs on . On/Off time is set by delay values
+  Blink 2 LEDs: 1 ON / 1 OFF
+  On/Off time is set by delay values
   Connect LEDs to pins 12 & 13
   ______________*/
 

@@ -1,7 +1,8 @@
 /*______________
   Basic Digital LED Control
 
-  Blink 1 LED . On/Off time is set by delay values
+  Blink 1 LED
+  On/Off time is set by delay values
   Connect LED to pin 13
   ______________*/
 
